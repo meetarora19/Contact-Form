@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Contact Form</title>
+    <style>
+        html, body {
+        min-height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 14px;
+        color: #71DFBE;
+        }
+        h1 {
+        margin: 0 0 20px;
+        font-weight: 400;
+        color: #71DFBE;
+        }
+        p {
+        margin: 0 0 5px;
+        }
+        .main-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        }
+        form {
+        padding: 25px;
+        width: 50px;
+        height: 400px;
+        margin: 25px;
+        box-shadow: 0 2px 5px #1D1F20; 
+        background: #1D1F20; 
+        border-radius: 5px;
+        }
+        .fas {
+        margin: 25px 10px 0;
+        font-size: 72px;
+        color: #fff;
+        }
+        .fa-envelope {
+        transform: rotate(-20deg);
+        }
+        .fa-at , .fa-mail-bulk{
+        transform: rotate(10deg);
+        }
+        input, textarea {
+        width: calc(100% - 18px);
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #71DFBE;
+        outline: none;
+        background-color: transparent;
+        border-radius: 5px;
+        color: #71DFBE;
+        }
+        input::placeholder {
+        color: #5e5f5f;
+        }
+        button:hover {
+        background: #5e5f5f;
+        }    
+        @media (min-width: 568px) {
+        .main-block {
+        flex-direction: row;
+        }
+        .left-part, form {
+        width: 50%;
+        }
+        .fa-envelope {
+        margin-top: 0;
+        margin-left: 20%;
+        }
+        .fa-at {
+        margin-top: -10%;
+        margin-left: 65%;
+        }
+        .fa-mail-bulk {
+        margin-top: 2%;
+        margin-left: 28%;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-block">
+        <div class="left-part">
+          <i class="fas fa-envelope"></i>
+          <i class="fas fa-at"></i>
+          <i class="fas fa-mail-bulk"></i>
+        </div>
+        <form action="mailto:ameet5613@gmail.com" method="post" enctype="text/plain">
+          <h1>Contact Us</h1>
+          <div class="info">
+            <input class="fname" type="text" name="Name" placeholder="Full name">
+            <input type="text" name="Email" placeholder="Email">
+            <input type="text" name="Website" placeholder="Website">
+            <input type="text" name="Message" placeholder="Message for Us">
+            <button class="btn" data-btn>Submit</button>
+                <div class="checkmark-container">
+                    <svg x="0px" y="0px" fill="none" class="checkmark-svg" viewBox="0 0 25 30">
+                        <path d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
+                    </svg>
+                </div>
+        </form>
+    </div>
+</body>
+</html>
